@@ -27,7 +27,7 @@ jobs:
       - run: echo 'export PYTHONPATH="${PYTHONPATH}:{HOME}:/testing_pytest_circleci_0"' >> $BASH_ENV
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -r requirements.txt
-      - run: pytest -vvv --cov test
+      - run: pytest -vvv --cov code
       - codecov/upload
 
   construccion_39: ## fdgdf
