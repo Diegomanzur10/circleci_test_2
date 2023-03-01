@@ -42,3 +42,8 @@ def test_division():
 def test_modulo():
     assert modulo(10, 2) == 0
 
+def test_multiplicacion():
+    assert multiplicacion(10, 2) == 20
+
+def test_resta():
+    assert resta(10, 2) == 8
