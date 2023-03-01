@@ -47,3 +47,6 @@ def test_multiplicacion():
 
 def test_resta():
     assert resta(10, 2) == 8
+
+def test_division2():
+    assert division(2, 1) == 2
