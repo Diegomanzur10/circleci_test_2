@@ -1,2 +1,2 @@
-.venvPytest
-.pytest_cache
+.venvPytest/
+.pytest_cache/
