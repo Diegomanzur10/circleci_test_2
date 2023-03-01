@@ -13,7 +13,7 @@ jobs:
       - run: python code/main.py
 
 
-workflow:
+workflows:
   construir_1:
     jobs:
       - contruccion
