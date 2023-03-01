@@ -1,4 +1,4 @@
-from code.main import suma, resta, multiplicacion, division
+from code.main import suma, resta, multiplicacion, division, modulo
 import pytest
 
 @pytest.mark.parametrize(
@@ -39,4 +39,6 @@ def test_suma(a, b, valor_esperado):
 def test_division():
     assert division(1, 1) == 1
 
+def test_modulo():
+    assert modulo(10, 2) == 0
 
