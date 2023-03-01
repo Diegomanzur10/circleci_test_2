@@ -1,0 +1,19 @@
+version: 2.1
+
+jobs:
+  contruccion:
+    working_directory: ~/circleci-python
+    docker:
+      - image: "circleci/python:3.8"
+    steps:
+      - checkout
+      - run: echo 'export PYTHONPATH="${PYTHONPATH}:"{HOME}:/testing_pytest_circleci_0'
+      - run: python -c "import sys; print(sys.path)"
+      - run: pytest --version
+      - run: python code/main.py
+
+
+workflow:
+  construir_1:
+    jobs:
+      - contruccion
