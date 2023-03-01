@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  contruccion: ## fdgdf
+  construccion: ## fdgdf
     working_directory: ~/circleci-python
     docker:
       - image: "circleci/python:3.8"
@@ -28,7 +28,7 @@ jobs:
 workflows:
   construccion_testing:
     jobs:
-      - contruccion
+      - construccion
       - testing:
           requires:
             - construccion
