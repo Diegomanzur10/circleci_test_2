@@ -1,7 +1,11 @@
 version: 2.1
 
+orbs:
+  codecov: codecov/codecov@1.0.2
+
+
 jobs:
-  construccion_38: ## fdgdf
+  construccion_38:
     working_directory: ~/circleci-python
     docker:
       - image: "circleci/python:3.8"
@@ -23,7 +27,8 @@ jobs:
       - run: echo 'export PYTHONPATH="${PYTHONPATH}:{HOME}:/testing_pytest_circleci_0"' >> $BASH_ENV
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -r requirements.txt
-      - run: pytest -vvv test/test_main.py
+      - run: pytest -vvv --cov test
+      - codecov/upload:
 
   construccion_39: ## fdgdf
     working_directory: ~/circleci-python
