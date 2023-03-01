@@ -35,7 +35,7 @@ import pytest
 def test_suma(a, b, valor_esperado):
     assert suma(a,b) == valor_esperado
 
-@pytest.mark.xfail
+@pytest.mark.skip(reason = "Funcion a depricar")
 def test_division():
     assert division(1, 1) == 1
 
